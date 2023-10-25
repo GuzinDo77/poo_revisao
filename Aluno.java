@@ -37,9 +37,13 @@ public class Aluno{
     }
 
     public boolean verificaSituacao(){
-        if((media<5) || (numFaltas<25)){
+        if((media<5) || (numFaltas>25)){
         return false;
     }
+        else if ((media>=5) && (numFaltas<25)){
+            return true;
+        }
+        else
         return true;
     }
 
